@@ -2,10 +2,7 @@ package clhote.spring.domain;
 
 import com.sun.org.apache.regexp.internal.RE;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 /**
@@ -14,7 +11,7 @@ import java.util.Set;
 @Entity
 public class Category {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
 
